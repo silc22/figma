@@ -1,0 +1,294 @@
+
+@font-face {
+  font-family: MYFONT;
+  src: url(../src/assets/test-soehne-breit-buch.woff2);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #E5E5E5;
+  font-family: MYFONT;
+
+}
+
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar{
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.brand{
+  min-width: 225px;
+  min-height: 80px; 
+  background: #E22623;
+  border-radius: 0 0 10px 0 ;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 24px;
+  font-family: MYFONT;
+}
+
+
+.navbar-conteiner{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.navbar-search{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 30px 34px;
+}
+
+.navbar-search svg{
+  margin-right: 22px;
+}
+
+.buscador{
+  border: unset;
+  width: 600px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.navbar-icons{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.icon, .progetti-icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1EE;
+  border-radius: 8px;
+  margin: 0 8px;
+  color: #323232;
+}
+
+.progetti-icon{
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.progetti-icon p{
+  font-size: 12px;
+}
+
+.icon{
+  padding: 8px, 16px, 8px, 16px;
+  Width: 56px;
+  Height:40px;
+}
+
+.icon:hover, .progetti-icon:hover{
+  background-color: #E0E0DD;
+}
+
+.user-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: beige;
+  margin: 20px 24px;
+}
+
+
+.main{
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+
+.tittle-conteiner{
+  font-family: MYFONT;
+  width: 550px;
+  line-height: 72.6px;
+  color: #A3A3A0;
+  margin: 96px 79px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.tittle-conteiner h1{
+  font-size: 55px;
+
+}
+
+
+.tittle-conteiner span{
+  color: rgb(50, 50, 50);
+
+}
+
+
+.content{
+  margin: 0 79px;
+  height: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+
+.content-text{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #323232
+  ;
+}
+
+.content-text svg {
+  color: #323232
+
+}
+
+.content-text p{
+  font-size: 28px;
+  line-height: 36px;
+  font-feature-settings: 'ss01' on;
+
+}
+
+
+.project-content{
+  display: flex;
+  flex-flow: row nowrap; 
+  width: 100%;
+}
+
+.newproject{
+  width: 196px;
+  height: 352px;  
+  background: #E0E0DD;
+  border-radius: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0;
+
+}
+
+.newproject svg{
+  font-size: 50px;
+}
+
+.project{
+  width: 25rem;
+  height: 350px;
+  background: #323232;
+  border-radius: 16px;
+  margin: 16px 12.5px;
+}
+
+.arrow-conteiner{
+  margin: 0 25px;
+}
+
+.arrow-conteiner svg{ 
+  margin: 4px;
+  color: #323232;
+  font-size: 16px;
+  background: #E0E0DD;
+  border-radius: 8px; 
+  width: 40px;
+  height: 30px;
+}
+
+
+.dropdown{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  background: #CCCCC9;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.dropdown svg{
+  color: #323232
+}
+
+
+.card-text{
+  width: 100%;
+  margin: 24px 24px 0 24px;
+}
+
+.text-tittle{
+  color: white;
+  font-size: 20px;
+}
+
+.card-subtittle{
+  font-size: 12px;
+  color: #A3A3A0;
+}
+
+
+.card-button{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80%;
+  margin: 10px 20px;
+}
+
+.card-button p{
+  border-radius: 10px;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin: 0 4px 0 0 ;
+}
+
+.name{
+  background-color: #C7C79E;
+}
+
+.vip{
+  background-color: #FFDC8E;
+}
+
+.tag{
+  background-color: #636363;
+  color: #EBEBE7;
+}
