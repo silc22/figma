@@ -280,9 +280,10 @@ p{
   font-weight: bold;
 }
 
+
+
 .items svg{
-  margin-right: 8px;
-  
+  margin-right: 8px; 
 }
 
 
@@ -435,29 +436,46 @@ p{
   
 
   .project{
-    min-width: 33rem;
+    min-width: 32rem;
     height: 25rem;
     background: #323232;
     border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
   }
   
-
   .slick-active div{
     width: 90% !important;
   }
 
+  .project-content-top{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 24px;
+  }
+
 .card-text{
-  margin: 24px 24px 0 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 16px;
 }
 
 .text-tittle{
+  font-family: Söhne Buch;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .card-subtittle{
-  font-size: 12px;
+  font-size: 16px;
   color: #A3A3A0;
+  line-height: 24px;
+  font-family: Söhne Buch;
+
 }
 
 
@@ -465,14 +483,16 @@ p{
   display: flex;
   flex-flow: row nowrap;
   width: 80%;
-  margin: 10px 20px;
+  
 }
 
 .card-button p{
   border-radius: 10px;
-  padding: 2px 5px;
-  font-size: 12px;
-  margin: 0 4px 0 0 ;
+  padding: 4px 12px;
+  margin: 0 8px 0 0;
+  font-family: Söhne Buch;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .name{
@@ -486,4 +506,14 @@ p{
 .tag{
   background-color: #636363;
   color: #EBEBE7;
+}
+
+.project-content-bottom{
+  min-width: 35rem;
+  height: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #c7c79e1f;
 }

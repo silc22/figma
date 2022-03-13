@@ -16,32 +16,114 @@ function Carousel(){
         subtittle: "Da chiudere entro il 17 set 2021",
         nameButton: "Mario Palladino",
         tag1: "tag",
-        tag2: "tag"},
+        tag2: "tag",
+        text: "8 boards, 2 preventivi nel progetto"},
         {tittle: "La nuova casa a Napoli",
         subtittle: "Da chiudere entro il 25 agosto 2021",
         nameButton: "Jhon Mirabelli",
         tag1: "Vip",
-        tag2: "tag"},
+        tag2: "tag",
+        text: "Il progetto è vuoto",
+        projects: [
+            {text1: "Living scandinavo",
+            text2: "32 proposte",
+            img1: require("../assets/products/image-1.png"),
+            img2: require("../assets/products/image-2.png"),
+            img3: require("../assets/products/image-3.png"),
+            },
+            {text1: "Kitchen mediterranea",
+            text2: "12 proposte",
+            img1: require("../assets/products/image-4.png"),
+            img2: require("../assets/products/image-5.png"),
+            img3: require("../assets/products/image-6.png"),
+            },
+            {text1: "Terrazzo",
+            text2: "7 proposte",
+            img1: require("../assets/products/image-7.png"),
+            img2: require("../assets/products/image-8.png"),
+            img3: require("../assets/products/image-9.png"),
+            }]},
         {tittle: "Appartamento a Modena",
         subtittle: "Da chiudere entro il 25 agosto 2021",
         nameButton: "Ivy Levan",
         tag1: "tag",
-        tag2: "tag"},
-        {tittle: "Mirabelli Loft a Milano ",
-        subtittle: "Da chiudere entro il 17 set 2021",
-        nameButton: "Mario Palladino",
-        tag1: "tag",
-        tag2: "tag"},
-        {tittle: "La nuova casa a Napoli",
-        subtittle: "Da chiudere entro il 25 agosto 2021",
-        nameButton: "Jhon Mirabelli",
-        tag1: "Vip",
-        tag2: "tag"},
-        {tittle: "Appartamento a Modena",
-        subtittle: "Da chiudere entro il 25 agosto 2021",
-        nameButton: "Ivy Levan",
-        tag1: "tag",
-        tag2: "tag"},
+        tag2: "tag",
+        text: "12 boards, 4 preventivi nel progetto",
+        projects: [
+            {text1: "Living scandinavo",
+            text2: "32 proposte",
+            img1: require("../assets/products/image-1.png"),
+            img2: require("../assets/products/image-2.png"),
+            img3: require("../assets/products/image-3.png"),
+            },
+            {text1: "Kitchen mediterranea",
+            text2: "12 proposte",
+            img1: require("../assets/products/image-4.png"),
+            img2: require("../assets/products/image-5.png"),
+            img3: require("../assets/products/image-6.png"),
+            },
+            {text1: "Terrazzo",
+            text2: "7 proposte",
+            img1: require("../assets/products/image-7.png"),
+            img2: require("../assets/products/image-8.png"),
+            img3: require("../assets/products/image-9.png"),
+            }]},
+            {tittle: "Mirabelli Loft a Milano ",
+            subtittle: "Da chiudere entro il 17 set 2021",
+            nameButton: "Mario Palladino",
+            tag1: "tag",
+            tag2: "tag",
+            text: "8 boards, 2 preventivi nel progetto"},
+            {tittle: "La nuova casa a Napoli",
+            subtittle: "Da chiudere entro il 25 agosto 2021",
+            nameButton: "Jhon Mirabelli",
+            tag1: "Vip",
+            tag2: "tag",
+            text: "Il progetto è vuoto",
+            projects: [
+                {text1: "Living scandinavo",
+                text2: "32 proposte",
+                img1: require("../assets/products/image-1.png"),
+                img2: require("../assets/products/image-2.png"),
+                img3: require("../assets/products/image-3.png"),
+                },
+                {text1: "Kitchen mediterranea",
+                text2: "12 proposte",
+                img1: require("../assets/products/image-4.png"),
+                img2: require("../assets/products/image-5.png"),
+                img3: require("../assets/products/image-6.png"),
+                },
+                {text1: "Terrazzo",
+                text2: "7 proposte",
+                img1: require("../assets/products/image-7.png"),
+                img2: require("../assets/products/image-8.png"),
+                img3: require("../assets/products/image-9.png"),
+                }]},
+            {tittle: "Appartamento a Modena",
+            subtittle: "Da chiudere entro il 25 agosto 2021",
+            nameButton: "Ivy Levan",
+            tag1: "tag",
+            tag2: "tag",
+            text: "12 boards, 4 preventivi nel progetto",
+            projects: [
+                {text1: "Living scandinavo",
+                text2: "32 proposte",
+                img1: require("../assets/products/image-1.png"),
+                img2: require("../assets/products/image-2.png"),
+                img3: require("../assets/products/image-3.png"),
+                },
+                {text1: "Kitchen mediterranea",
+                text2: "12 proposte",
+                img1: require("../assets/products/image-4.png"),
+                img2: require("../assets/products/image-5.png"),
+                img3: require("../assets/products/image-6.png"),
+                },
+                {text1: "Terrazzo",
+                text2: "7 proposte",
+                img1: require("../assets/products/image-7.png"),
+                img2: require("../assets/products/image-8.png"),
+                img3: require("../assets/products/image-9.png"),
+                }]},
     ]
 
     const settings = {
@@ -50,7 +132,7 @@ function Carousel(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        
+        speed: 900
       };
 
     return(
@@ -77,6 +159,7 @@ function Carousel(){
             <Slider {...settings} ref={reference}>
                     {content?.map((element, index)=>
                     <div className='project' key={index}>
+                        <div className="project-content-top">
                             <div className='card-text'>
                                 <p className='text-tittle'>
                                     {element.tittle}
@@ -96,6 +179,10 @@ function Carousel(){
                                 {element.tag2} 
                                 </p>
                             </div>
+                        </div>
+                        <div className="project-content-bottom">
+                            
+                        </div>
                     </div>)}
             </Slider>
             </div>
