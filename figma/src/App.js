@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './App.css';
 import SearchIcon from '@mui/icons-material/Search';
 import SpeedIcon from '@mui/icons-material/Speed';
@@ -6,23 +7,28 @@ import WidgetsIcon from '@mui/icons-material/Widgets';
 import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import PriceChangeIcon from '@mui/icons-material/PriceChange';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import userPicture from "../src/assets/Ellipse 1.png"
+import Carousel from './components/Carousel';
 
 function App() {
+
+
+  const [handler, setHandler] = useState(false)
+
+  function dropdown(){
+    setHandler(!handler)
+  }
   return (
-    <div className="container">
-        <div className='navbar'> 
+    <div className="container-principal">
+        <div className='navbar-principal'> 
           <div className='brand'>
               <p className='brand-tittle'>more</p>
           </div>
           <div className="navbar-conteiner">
             <div className='navbar-search'>
               <SearchIcon/>
-              <input placeholder='Cerca in tutto il catalogo o sfoglia tra le categorie' className='buscador'>
+              <input placeholder='Cerca in tutto il catalogo o sfoglia tra le categorie' className='searcher'>
               </input>
             </div>
             <div className='navbar-icons'>
@@ -31,7 +37,7 @@ function App() {
               </div>
               <div className='progetti-icon'>
                 <StickyNote2Icon/>
-                <p>Progetti</p>
+                <p><b>Progetti</b></p>
               </div>
               <div className='icon'>
               <WidgetsIcon/>
@@ -46,100 +52,46 @@ function App() {
                 <NotificationsActiveIcon/>
               </div>
               <div className='user-image'>
-                
+                <img src={userPicture}></img>
               </div>
             </div>
           </div>
         </div>
       <div className='main'>
         <div className='tittle-conteiner'>
-          <h1>
-            Bentornato <span>Rino</span>, ricomincia subito
-          </h1>
-          <div className='dropdown'>
-              <KeyboardArrowDownIcon/>
-          </div>
+          <div className='tittle-conteiner-children'>
+            <h1>
+              Bentornato <span>Rino</span>, ricomincia subito
+            </h1>
+              <div className="dropdown" onClick={()=>dropdown()}>
+                  <KeyboardArrowDownIcon/>
+              </div>
+              <div className={handler ? 'dropdown-open': "dropdown-close"}>
+                <ul className='dropdown-items-text'>
+                  <li className='items-tittle'>
+                  Partendo dalle boards, sviluppa preventivi e gestisci gli ordini, con:
+                  </li>
+                  <li className='items'>
+                  <StickyNote2Icon/> Un nuovo progetto
+                  </li>
+                  <hr/>
+                  <li className='items-tittle'>
+                  Oppure, creando in modalià singola:
+                  </li>
+                  <li className='items'>
+                  <WidgetsIcon/> Una nuova board
+                  </li>
+                  <li className='items'>
+                  <ConfirmationNumberIcon/> Un nuovo preventivo
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
         </div>
-        <div className='content'>
-          <div className='content-text'>
-          <p >I miei ultimi Progetti</p>
-          <div className='arrow-conteiner'>
-            <ArrowBackIcon/>
-            <ArrowForwardIcon/>
-          </div>
-          </div>
-          <div className='project-content'>
-            <div className='newproject'>
-              <AddBoxIcon/>
-              <p>Nuovo progetto</p>
-            </div>
-            <div className='project'>
-              <div className='card-text'>
-                  <p className='text-tittle'>
-                        Mirabelli Loft a Milano 
-                  </p>
-                  <p className='card-subtittle'>
-                        Da chiudere entro il 17 set 2021
-                  </p>
-                </div>
-                <div className='card-button'>
-                    <p className='name'>
-                        Jhon Mirabelli 
-                    </p>
-                    <p className='vip'>
-                          vip
-                    </p>
-                    <p  className='tag'>
-                        tag
-                    </p>
-                </div>
-            </div>
-            <div className='project'>
-              <div className='card-text'>
-                <p className='text-tittle'>
-                      Mirabelli Loft a Milano 
-                </p>
-                <p className='card-subtittle'>
-                      Da chiudere entro il 17 set 2021
-                </p>
-              </div>
-              <div className='card-button'>
-                  <p className='name'>
-                      Jhon Mirabelli 
-                  </p>
-                  <p className='vip'>
-                        vip
-                  </p>
-                  <p  className='tag'>
-                      tag
-                  </p>
-              </div>
-            </div>
-            <div className='project'>
-            <div className='card-text'>
-                  <p className='text-tittle'>
-                        Mirabelli Loft a Milano 
-                  </p>
-                  <p className='card-subtittle'>
-                        Da chiudere entro il 17 set 2021
-                  </p>
-                </div>
-                <div className='card-button'>
-                    <p className='name'>
-                        Ivy Levan 
-                    </p>
-                    <p className='vip'>
-                          vip
-                    </p>
-                    <p  className='tag'>
-                        tag
-                    </p>
-                </div>
-            </div>
-          </div>
+        <Carousel/>
         </div>
       </div>
-    </div>
   );
 }
 
