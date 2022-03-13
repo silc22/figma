@@ -37,9 +37,9 @@ function App() {
               </div>
               <div className='progetti-icon'>
                 <StickyNote2Icon/>
-                <p><b>Progetti</b></p>
+                <p>Progetti</p>
               </div>
-              <div className='icon'>
+              <div className='icon' title='Boards'>
               <WidgetsIcon/>
               </div>
               <div className='icon'>
