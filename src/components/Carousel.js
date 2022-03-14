@@ -190,10 +190,10 @@ function Carousel(){
                             <div className="project-content-tittle">
                                 <p className={element.tittleCard1? "" : "project-content-empty"}>{element.text}</p>    
                             </div> 
-                            <div className="project-content-cards">
                                 {
                                    element.tittleCard1?
                                    <>
+                            <div className="project-content-cards">
                                     <div className="cards">
                                         <div className="cards-text">
                                             <p className="card-text-tittle">{element.tittleCard1}</p>
@@ -227,14 +227,16 @@ function Carousel(){
                                         <img src={element.img9} alt="product"></img>
                                         </div>
                                     </div>
+                            </div>         
                                    </> 
                                     :
+                                    <div className="project-content-empty">
                                     <div className='card-empty'>
                                         <Add/>
                                         <p>Crea Board</p>
                                     </div>
+                                    </div>
                                 }
-                            </div>         
                         </div>
                     </div>)}
             </Slider>
