@@ -520,8 +520,9 @@ p{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-around;
-    width: 446px
+  justify-content: space-between;
+  width: 435px;
+
 }
 
 .cards{
