@@ -397,7 +397,6 @@ p{
 .slider__content{
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; 
   margin-top: 8px;
   width: 1168px;
   height: 360px;
