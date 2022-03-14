@@ -19,6 +19,7 @@ function Carousel(){
 
     const reference = useRef(null)
 
+
     const content = [
         {tittle: "Mirabelli Loft a Milano ",
         subtittle: "Da chiudere entro il 17 set 2021",
@@ -135,7 +136,9 @@ function Carousel(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        speed: 900
+        speed: 500,
+        initialSlide: 0,
+        rtl: true
       };
 
     return(
@@ -153,21 +156,21 @@ function Carousel(){
                 </div>
           </div>
           <div className="content-carousel-bottom">
-          <div className='newproject'>
+            <div className='newproject'>
                 <Add/>
                 <p>Nuovo progetto</p>
             </div>
-          <div className="slider__content">
+            <div className="slider__content">
             <div className="slider">
             <Slider {...settings} ref={reference}>
                     {content?.map((element, index)=>
-                    <div className='project' key={index}>
+                    <div className='project' key={index} >
                         <div className="project-content-top">
                             <div className='card-text'>
-                                <p className='text-tittle'>
+                                <p className='card-text-tittle-content'>
                                     {element.tittle}
                                 </p>
-                                <p className='card-subtittle'>
+                                <p className='card-text-subtittle'>
                                     {element.subtittle}  
                                 </p>
                             </div>

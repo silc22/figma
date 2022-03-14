@@ -25,7 +25,6 @@
 body{
   background-color: #E5E5E5 !important;
   font-family: Söhne Kraftig;
-  overflow-x: hidden;
 }
 
 p{
@@ -43,12 +42,14 @@ p{
 }
 
 
+
 /* NAVBAR */
+
 .navbar-principal{
   height: 80px;
   left: 0px;
   top: 0px;
-  width: 100%;
+  width: 1456px;
   background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
   display: flex;
   flex-flow: row nowrap;
@@ -56,11 +57,10 @@ p{
 }
 
 .brand{
-  min-width: 225px;
-  min-height: 80px; 
+  width: 240px;
+  height: 80px; 
   background: #E22623;
   border-radius: 0 0 10px 0 ;
-  font-size: 32px;
   color: white;
   display: flex;
   align-items: center;
@@ -70,26 +70,30 @@ p{
   font-family: Söhne Breit;
 }
 
-.brand p {
+.brand-tittle {
+  font-size: 32px;
+  line-height: 32px;
   padding-top: 10px;
 }
 
 
 .navbar-conteiner{
-  width: calc(100% - 80px);
+  width: calc(1456px - 240px);
+  height: 80px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  
 }
 
 .navbar-search{
+  width: 624px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  margin: 30px 34px;
+  margin: 0 34px;
 }
 
 .navbar-search svg{
@@ -100,7 +104,7 @@ p{
 .searcher{
   font-family: Söhne Buch;
   border: unset;
-  width: 600px;
+  width: 100%;
   height: 24px;
   font-size: 18px;
   background-color: transparent;
@@ -115,7 +119,6 @@ p{
 
 
 .navbar-icons{
-  width: 50%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -123,16 +126,23 @@ p{
 }
 
 
-.icon, .progetti-icon {
+.icon, .progetti-icon, .notification-icon {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   background-color: #f1f1ee;
   border-radius: 8px;
-  margin: 0 8px;
   color: #323232;
   cursor: pointer;
+}
+
+.icon{
+  margin-right: 8px;
+}
+
+.notification-icon{
+  margin-left: 12px;
 }
 
 .progetti-icon{
@@ -140,7 +150,7 @@ p{
   font-size: 18px;
   line-height: 24px;
   font-family: Söhne Kraftig;
-  
+  margin-right: 8px;
 }
 
 .progetti-icon p{
@@ -148,13 +158,11 @@ p{
   padding-left: 5px;
 }
 
-.icon{
-  padding: 8px, 16px, 8px, 16px;
-  width: 56px;
-  height:40px;
+.icon, .notification-icon{
+  padding: 8px 16px;
 }
 
-.icon:hover, .progetti-icon:hover{
+.icon:hover, .progetti-icon:hover, .notification-icon:hover{
   background-color: #E0E0DD;
 }
 
@@ -166,7 +174,6 @@ p{
   align-items: center;
   justify-content: center;
   margin: 20px 20px;
-
 }
 
 .user-image img{
@@ -177,59 +184,61 @@ p{
 }
 
 
+/* MAIN COMPONENT */
+
 .main{
-  width: 100%;
-  min-height: calc(100vh - 80px);
+  width: 1456px;
+  height: 876px;
   background-color: #E5E5E5;
 }
 
 
 .tittle-conteiner{
   font-family: Söhne Buch;
-  width: 600px;
-  height: calc(50vh - 80px);
+  width: 50%;
+  height: 388px;
   line-height: 72.6px;
   color: #A3A3A0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-  margin: 20px 79px 30px 77px;
-
-}
-
-.tittle-conteiner h1{
-  font-size: 68px;
-  font-family: Söhne Kraftig;
-  line-height: 110%;
-  font-feature-settings: 'ss01' on;
-  
-}
-
-
-.tittle-conteiner span{
-  color: rgb(50, 50, 50);
+  margin: 0 79px;
 }
 
 .tittle-conteiner-children{
+  width: 580px;
   display: flex;
   align-items: flex-end;
   margin-bottom: 50px;
 }
 
 
+.tittle-conteiner-children h1{
+  font-size: 66px;
+  font-family: Söhne Kraftig;
+  line-height: 110%;
+  font-feature-settings: 'ss01' on;
+}
+
+.tittle-conteiner span{
+  color: rgb(50, 50, 50);
+}
+
+
 .dropdown{
+  position: relative;
   display:flex;
   align-items: center;
   justify-content: center;
-  margin: 16px 4px;
+  margin: 20px 0px;
   color: #323232;
   background-color: #F1F1EE;
   border-radius: 8px;
-  min-width: 56px;
-  min-height: 40px;
+  width: 56px;
+  height: 40px;
+  padding: 14px 17px;
   cursor: pointer;
-  margin-bottom: 25px;
 }
 
 .dropdown svg{
@@ -244,13 +253,13 @@ p{
 }
 
 .dropdown-open{
+  position: absolute;
   width: 311px;
   height: 297px;
   background: #FFFFFF;
-  position: absolute;
   border-radius: 8px;
-  left: 362px;
-  top: calc(50vh /2 + 95px);
+  left: -255px;
+  top: 50px;
   z-index: 10;
   box-shadow: 0px 4px 16px rgba(50, 50, 50, 0.3);
   border-radius: 8px;
@@ -282,96 +291,36 @@ p{
   font-weight: bold;
 }
 
-
-
 .items svg{
   margin-right: 8px; 
 }
 
 
 
-/* CAROUSEL COMPONENT */
+/* CAROUSEL COMPONENT - GENERAL */
 
 .content-carousel-principal{
-  width: 100%;
+  width: 1456px;
   padding: 0 0 0 79px;
-  height: 50%;
+  height: 488px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
   align-items: center;
 }
 
 .content-carousel-top{
+  width: 100%;
+  margin: 0 80px;
   display: flex;
   flex-flow: row nowrap;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 0 32px;
-
 }
 
 .content-carousel-top p{
   font-family: Söhne Kraftig;
   font-size: 28px;
 }
-
-.content-carousel-bottom{
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  margin-bottom: 64px;
-}
-
-
-.content-text{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  color: #323232;
-}
-
-.content-text svg {
-  color: #323232
-
-}
-
-.content-text p{
-  font-family: Söhne Buch;
-  font-size: 28px;
-  line-height: 36px;
-  font-feature-settings: 'ss01' on;
-  font-weight: bold;
-}
-
-
-.newproject{
-  min-width: 15rem;
-  height: 25rem;  
-  background: #E0E0DD;
-  border-radius: 16px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  margin: 32px 0;
-  font-family: Söhne Kraftig;
-
-}
-
-
-.newproject svg{
-  font-size: 50px;
-  margin-bottom: 23px;
-}
-
-
-
 
 .arrow-conteiner{
   margin-right: 80px;
@@ -404,88 +353,116 @@ p{
 }
 
 
+.content-carousel-bottom{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 32px 24px 0 0;
+}
+
+
+.newproject{
+  min-width: 196px;
+  min-height: 352px; 
+  background: #E0E0DD;
+  border-radius: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: Söhne Kraftig;
+  margin: 0px 24px 0 0;
+}
+
+.newproject svg{
+  font-size: 50px;
+  margin-bottom: 23px;
+}
+
+
+
 /* CAROUSEL STYLE */
 
 .slider__content{
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  width: 90vw;
-  margin-left: 30px;
+  justify-content: flex-end;
+  align-items: flex-end; 
+  margin-top: 8px;
+  width: 1168px;
+  height: 360px;
+  overflow: hidden;
 }
 
 .slider{
-    margin: 32px 0;
-    width: 90vw;
-    min-height: 20rem;
+    width: 1255px;
+    height: 360px;
     border-radius: 16px;
   }
   
-  .slider-element{
-    display: flex;
-  }
-  
-  .content-carousel{
-    max-width: 71vw;
-    height: 90%;
-    object-fit: cover;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: hidden;
-  }
-  
+/* REACT SLICK CLASES */
+.slick-slide {
+  margin: 0 12px;
+  width: 416px;
+}
 
-  .project{
-    width: 30rem;
-    height: 25rem;
+.slick-list {
+  margin: 0 12px;
+}
+
+.slick-active{
+  width: 416px;
+} 
+
+.slick-current{
+  width: 416px;
+}
+
+
+/* CARDS CLASES */
+.project{
+    height: 352px;
     background: #323232;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-  }
-  
-  .slick-active> div{
-    width: 90% !important;
-  }
+}
 
-  .project-content-top{
+
+.project-content-top{
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: center;
     margin: 30px;
-  }
+}
 
 .card-text{
+  font-family: Söhne Buch;
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 16px;
 }
 
-.text-tittle{
-  font-family: Söhne Buch;
+.card-text-tittle-content{
   color: white;
   font-size: 24px;
 }
 
-.card-subtittle{
+.card-text-subtittle{
   font-size: 16px;
   color: #A3A3A0;
   line-height: 24px;
-  font-family: Söhne Buch;
-
 }
-
 
 .card-button{
   display: flex;
   flex-flow: row nowrap;
-  width: 80%;
-  
+  width: 85%;
 }
 
 .card-button p{
@@ -513,13 +490,14 @@ p{
 .project-content-bottom{
   font-family: Söhne Buch;
   min-width: 35rem;
-  height: 85%;
+  height: 240px;
   display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 30px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 30px;
 }
+
 .project-content-tittle p{
   padding: 0 0 16px 0px;
   font-size: 18px;
@@ -527,18 +505,21 @@ p{
   color: #FFFFFF;
 }
 
+.project-content-empty{
+  color:#A3A3A0 !important
+}
+
 .project-content-cards{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  height: 60%;
+  width: 73%;
 }
 
 .cards{
-  width: 10rem;
-  height: 12rem;
+  width: 128px;
+  height: 155px; 
   display: flex;
   flex-flow: column nowrap;
   background: #FFFFFF;
@@ -584,16 +565,12 @@ color: #A3A3A0;
 .cards-img img{
   object-fit: contain;
   width: 40px;
-height: 42px;
-}
-
-.project-content-empty{
-  color:#A3A3A0 !important
+  height: 42px;
 }
 
 .card-empty{
-  width: 10rem;
-  height: 12rem;
+  width: 128px;
+  height: 155px;
   display: flex;
   flex-flow: column nowrap;
   background: #A3A3A0;
@@ -616,5 +593,4 @@ color: #323232;
   width: 24px;
   height: 24px;
   margin-bottom: 8px;
-
 }
