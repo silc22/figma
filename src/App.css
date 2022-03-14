@@ -31,6 +31,8 @@ p{
   margin-bottom: unset !important; 
 }
 
+
+
 /* COMPONENTE APP */
 
 
@@ -164,6 +166,8 @@ p{
 
 .icon:hover, .progetti-icon:hover, .notification-icon:hover{
   background-color: #E0E0DD;
+  transition: .5s;
+
 }
 
 .user-image{
@@ -247,6 +251,8 @@ p{
 
 .dropdown:hover{
   background-color: #CCCCC9 ;
+  transition: .5s;
+
 }
 .dropdown-close{
   display: none;
@@ -350,6 +356,8 @@ p{
 .arrow-conteiner div svg:hover{
   color: #323232;
   cursor: pointer;
+  transition: .5s;
+
 }
 
 
