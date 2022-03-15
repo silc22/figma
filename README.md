@@ -4,7 +4,7 @@ To install:
 
 $ npm install 
 
-To initilize:
+To initialize:
 
 $ npm start 
 
